@@ -6,144 +6,165 @@
   <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/DWBA4/dwba4_semana_imagens/refs/heads/master/favicon.ico">
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-    }
-    
-    /* Menu principal */
-    .menu {
-      background-color: #333;
-      /* overflow: hidden; <-- REMOVA essa linha */
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      position: relative; /* Adiciona contexto para o submenu */
-      z-index: 10;
+      margin: 20px;
     }
 
-    .menu a {
-      color: white;
-      padding: 14px 20px;
-      text-decoration: none;
-      display: block;
-    }
-
-    .menu a:hover {
-      background-color: #8b0000;
-    }
-
-    /* Submenu */
-    .submenu {
-      position: relative;
-    }
-
-    .submenu-content {
-      display: none;
-      position: absolute;
-      background-color: white;
-      min-width: 200px;
-      z-index: 1;
-    }
-
-    .submenu-content a {
-      color: red;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    .submenu-content a:hover {
-      background-color: #f1f1f1;
-    }
-
-    .submenu:hover .submenu-content {
-      display: block;
-    }
-
-    /* Logo */
-    .logo {
-      background-color: #00923f;
-      padding: 20px;
-    }
-
-    .logo img {
-      height: 50px;
-    }
-
-    footer {
-      background-color: #f1f1f1;
-      padding: 20px;
-      font-size: 14px;
+    h1 {
       text-align: center;
     }
 
+    form {
+      max-width: 600px;
+      margin: 30px auto;
+      background-color: #f9f9f9;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      width: 120px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      flex: 1;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      height: 100px;
+    }
+
+    .checkbox-group {
+      margin-top: 15px;
+    }
+
+    .checkbox-group label {
+      margin-right: 15px;
+    }
+
+    .submit-button {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .submit-button button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .submit-button button:hover {
+      background-color: #45a049;
+    }
+
+    footer {
+      margin-top: 40px;
+      background-color: #f5f5f5;
+      padding: 15px;
+      text-align: center;
+      font-size: 0.9em;
+      border-top: 2px solid #ccc;
+    }
+
     .facebook-link img {
+      width: 24px;
       vertical-align: middle;
-      height: 20px;
+      margin-right: 5px;
+    }
+
+    .top-menu {
+      text-align: right;
+      margin-bottom: 10px;
+    }
+
+    .top-menu a {
+      margin: 0 5px;
+      text-decoration: none;
+      color: #007BFF;
+    }
+
+    .top-menu a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <!-- Menu -->
-  <div class="menu">
-    <a href="index.html">HOME</a>
-    <a href="eventos.html">EVENTOS</a>
-    <a href="contato.html">CONTATO</a>
-    <div class="submenu">
-      <a href="#">CURSOS</a>
-      <div class="submenu-content">
-        <a href="#">Análise e Desenvolvimento de Sistemas</a>
-        <a href="#">Engenharia de Produção</a>
-      </div>
-    </div>
+
+  <div class="top-menu">
+    <a href="index.html">HOME</a> |
+    <a href="eventos.html">EVENTOS</a> |
+    <a href="contato.html">CONTATO</a> |
+    <a href="sobre.html">SOBRE</a> |
     <a href="entrar.html">ENTRAR</a>
-    <a href="sobre.html">SOBRE</a>
   </div>
 
-  <!-- Logo -->
-  <div class="logo">
-    <img src="https://raw.githubusercontent.com/DWBA4/dwba4_semana_imagens/refs/heads/master/Logo.jpg" alt="Instituto Federal São Paulo">
-  </div>
-  
-    <h1>Mande uma mensagem</h1>
-    <form>
-      <label for="nome">Nome</label>
+  <img src="https://raw.githubusercontent.com/DWBA4/dwba4_semana_imagens/refs/heads/master/Logo.jpg" alt="Instituto Federal São Paulo" height="50">
+
+  <h1>Mande uma mensagem</h1>
+
+  <form>
+    <div class="form-group">
+      <label for="nome">Nome:</label>
       <input type="text" id="nome" name="nome">
+    </div>
 
-      <label for="email">E-mail</label>
+    <div class="form-group">
+      <label for="email">E-mail:</label>
       <input type="email" id="email" name="email">
+    </div>
 
-      <label for="telefone">Telefone</label>
+    <div class="form-group">
+      <label for="telefone">Telefone:</label>
       <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999">
+    </div>
 
-      <label for="assunto">Assunto</label>
+    <div class="form-group">
+      <label for="assunto">Assunto:</label>
       <select id="assunto" name="assunto">
         <option>-- Selecione --</option>
         <option>Reclamação</option>
         <option>Sugestão</option>
       </select>
+    </div>
 
-      <label for="mensagem">Mensagem</label>
+    <div class="form-group">
+      <label for="mensagem">Mensagem:</label>
       <textarea id="mensagem" name="mensagem"></textarea>
+    </div>
 
-      <div class="checkbox-group">
-        <span>Opções de Resposta</span><br>
-        <label><input type="checkbox" name="resposta" value="email"> E-Mail</label>
-        <label><input type="checkbox" name="resposta" value="telefone"> Telefone</label>
-      </div>
+    <div class="checkbox-group">
+      <span>Opções de Resposta:</span><br>
+      <label><input type="checkbox" name="resposta" value="email"> E-Mail</label>
+      <label><input type="checkbox" name="resposta" value="telefone"> Telefone</label>
+    </div>
 
-      <div class="submit-button">
-        <button type="submit">Enviar</button>
-      </div>
-    </form>
-  
-    <footer>
-      <p>IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (011) 2504-0100</p>
-      <p>
-        <a class="facebook-link" href="https://www.facebook.com/ifsppirituba" target="_blank">
-          <img src="https://raw.githubusercontent.com/DWBA4/dwba4_semana_imagens/refs/heads/master/facebook.png" alt="Facebook"> Visite nossa página no Facebook
-        </a>
-      </p>
-    </footer>
+    <div class="submit-button">
+      <button type="submit">Enviar</button>
+    </div>
+  </form>
+
+  <footer>
+    <p>IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (011) 2504-0100</p>
+    <p>
+      <a class="facebook-link" href="https://www.facebook.com/ifsppirituba" target="_blank">
+        <img src="https://raw.githubusercontent.com/DWBA4/dwba4_semana_imagens/refs/heads/master/facebook.png" alt="Facebook"> Visite nossa página no Facebook
+      </a>
+    </p>
+  </footer>
 </body>
 </html>
