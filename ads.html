@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Sobre - IFSP</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+  /* Menu principal */
+    .menu {
+      background-color: #333;
+      /* overflow: hidden; <-- REMOVA essa linha */
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative; /* Adiciona contexto para o submenu */
+      z-index: 10;
+    }
+
+    .menu a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .menu a:hover {
+      background-color: #8b0000;
+    }
+
+    /* Submenu */
+    .submenu {
+      position: relative;
+    }
+
+    .submenu-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 200px;
+      z-index: 1;
+    }
+
+    .submenu-content a {
+      color: red;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .submenu-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .submenu:hover .submenu-content {
+      display: block;
+    }
+
+    /* Logo */
+    .logo {
+      background-color: #00923f;
+      padding: 20px;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+    
+    h2 {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      padding: 20px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .facebook-link img {
+      vertical-align: middle;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menu -->
+  <div class="menu">
+    <a href="index.html">HOME</a>
+    <a href="eventos.html">EVENTOS</a>
+    <a href="contato.html">CONTATO</a>
+    <div class="submenu">
+      <a href="#">CURSOS</a>
+      <div class="submenu-content">
+        <a href="ads.html">Análise e Desenvolvimento de Sistemas</a>
+        <a href="eng.html">Engenharia de Produção</a>
+      </div>
+    </div>
+    <a href="entrar.html">ENTRAR</a>
+    <a href="sobre.html">SOBRE</a>
+  </div>
+
+  <!-- Logo -->
+  <div class="logo">
+    <img src="https://raw.githubusercontent.com/DWBA4/dwba4_semana_imagens/refs/heads/master/Logo.jpg" alt="Instituto Federal São Paulo">
+  </div>
+
+  <h2>Análise e Desenvolvimento de Sistemas</h2>
+  <p>O Tecnólogo em Análise e Desenvolvimento de Sistemas (ADS) formado pelo IFSP elabora e analisa projetos e coordena equipes de produção de software. Documenta, desenvolve, testa, implanta e mantém sistemas de informação, a partir da escolha das tecnologias mais apropriadas para cada situação. Avalia, seleciona, específica e utiliza metodologias, tecnologias e ferramentas da engenharia de software, linguagens de programação e bancos de dados considerando a necessidade de garantir uma formação profissional tecnológica e assim contribuindo para o fortalecimento e crescimento dos arranjos produtivos, sejam eles locais, regionais e ou nacionais. Aplica conceitos e princípios de desenvolvimento de software que incluam atributos de qualidade relacionados à funcionalidade, manutenibilidade, portabilidade, usabilidade, confiabilidade, eficiência, segurança e compatibilidade. Conhece componentes de hardware e sistemas operacionais e identifica o modo como esses componentes afetam o desenvolvimento de software. Conhece e utiliza infraestrutura tecnológica de rede a fim de projetar, implementar e implantar sistemas de software e está apto a reconhecer novas técnicas e equipamentos em sua área de atuação. Vistoria, realiza perícia, avalia, emite laudo e parecer técnico em sua área de formação. Conhece aspectos éticos, morais e legais de sua área de atuação. Atua como empreendedor de modo crítico e proativo para desenvolver e propor soluções informatizadas, com responsabilidade social e ambiental.
+O novo curso de Tecnologia em Análise e Desenvolvimento de Sistemas do IFSP Campus Guarulhos tem carga horária 2040 horas que estão distribuídas em cinco semestres, na modalidade presencial, com 36,3% dessa carga horária composta por componentes curriculares ministrados a distância e 10,5% em atividades de extensão.</p>
+
+  <footer>
+    <p>IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (011) 2504-0100</p>
+    <p>
+      <a class="facebook-link" href="https://www.facebook.com/ifsppirituba" target="_blank">
+        <img src="https://raw.githubusercontent.com/DWBA4/dwba4_semana_imagens/refs/heads/master/facebook.png" alt="Facebook"> Visite nossa página no Facebook
+      </a>
+    </p>
+  </footer>
+
+</body>
+</html>
