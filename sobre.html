@@ -9,13 +9,15 @@
       font-family: Arial, sans-serif;
     }
 
-    /* Menu principal */
+  /* Menu principal */
     .menu {
       background-color: #333;
-      overflow: hidden;
+      /* overflow: hidden; <-- REMOVA essa linha */
       display: flex;
       justify-content: flex-start;
       align-items: center;
+      position: relative; /* Adiciona contexto para o submenu */
+      z-index: 10;
     }
 
     .menu a {
