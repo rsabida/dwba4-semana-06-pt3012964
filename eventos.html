@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Eventos - IFSP</title>
+  <style>
+   body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+  /* Menu principal */
+    .menu {
+      background-color: #333;
+      /* overflow: hidden; <-- REMOVA essa linha */
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative; /* Adiciona contexto para o submenu */
+      z-index: 10;
+    }
+
+    .menu a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .menu a:hover {
+      background-color: #8b0000;
+    }
+
+    /* Submenu */
+    .submenu {
+      position: relative;
+    }
+
+    .submenu-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 200px;
+      z-index: 1;
+    }
+
+    .submenu-content a {
+      color: red;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .submenu-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .submenu:hover .submenu-content {
+      display: block;
+    }
+
+    /* Logo */
+    .logo {
+      background-color: #00923f;
+      padding: 20px;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      padding: 20px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .facebook-link img {
+      vertical-align: middle;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Menu -->
+  <div class="menu">
+    <a href="index.html">HOME</a>
+    <a href="eventos.html">EVENTOS</a>
+    <a href="contato.html">CONTATO</a>
+    <div class="submenu">
+      <a href="#">CURSOS</a>
+      <div class="submenu-content">
+        <a href="#">Análise e Desenvolvimento de Sistemas</a>
+        <a href="#">Engenharia de Produção</a>
+      </div>
+    </div>
+    <a href="entrar.html">ENTRAR</a>
+    <a href="sobre.html">SOBRE</a>
+  </div>
+
+  <!-- Logo -->
+  <div class="logo">
+    <img src="https://raw.githubusercontent.com/DWBA4/dwba4_semana_imagens/refs/heads/master/Logo.jpg" alt="Instituto Federal São Paulo">
+  </div>
+
+    <h1>Inscreva-se</h1>
+
+    <form>
+      <label for="evento">Evento</label>
+      <select id="evento">
+        <option>Voe sem asas</option>
+        <option>Festa Junina</option>
+        <option>Semana da tecnologia</option>
+      </select>
+
+      <fieldset>
+        <legend>Informações de Acesso</legend>
+
+        <label for="usuario">Usuário</label>
+        <input type="text" id="usuario" name="usuario">
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha">
+
+        <label for="confirmarSenha">Confirme a Senha</label>
+        <input type="password" id="confirmarSenha" name="confirmarSenha">
+      </fieldset>
+
+      <fieldset>
+        <legend>Informações Pessoais</legend>
+
+        <label for="nome">Nome Completo</label>
+        <input type="text" id="nome" name="nome">
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email">
+
+        <label for="celular">Celular</label>
+        <input type="text" id="celular" name="celular" placeholder="(99) 99999-9999">
+
+        <label>Sexo</label>
+        <div class="radio-group">
+          <label><input type="radio" name="sexo" value="masculino"> Masculino</label>
+          <label><input type="radio" name="sexo" value="feminino"> Feminino</label>
+        </div>
+
+        <label for="nascimento">Data de Nascimento</label>
+        <input type="date" id="nascimento" name="nascimento">
+
+        <label for="cor">Cor Favorita</label>
+        <input type="color" id="cor" name="cor">
+
+        <label for="github">Perfil no Github</label>
+        <input type="url" id="github" name="github">
+      </fieldset>
+
+      <div class="buttons">
+        <input type="submit" value="Inscrever">
+        <input type="reset" value="Limpar">
+      </div>
+    </form>
+
+    <footer>
+      <p>IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (011) 2504-0100</p>
+      <p>
+        <a class="facebook-link" href="https://www.facebook.com/ifsppirituba" target="_blank">
+          <img src="https://raw.githubusercontent.com/DWBA4/dwba4_semana_imagens/refs/heads/master/facebook.png" alt="Facebook"> Visite nossa página no Facebook
+        </a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
