@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Sobre - IFSP</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+  /* Menu principal */
+    .menu {
+      background-color: #333;
+      /* overflow: hidden; <-- REMOVA essa linha */
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative; /* Adiciona contexto para o submenu */
+      z-index: 10;
+    }
+
+    .menu a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .menu a:hover {
+      background-color: #8b0000;
+    }
+
+    /* Submenu */
+    .submenu {
+      position: relative;
+    }
+
+    .submenu-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 200px;
+      z-index: 1;
+    }
+
+    .submenu-content a {
+      color: red;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .submenu-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .submenu:hover .submenu-content {
+      display: block;
+    }
+
+    /* Logo */
+    .logo {
+      background-color: #00923f;
+      padding: 20px;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+    
+    h2 {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      padding: 20px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .facebook-link img {
+      vertical-align: middle;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menu -->
+  <div class="menu">
+    <a href="index.html">HOME</a>
+    <a href="eventos.html">EVENTOS</a>
+    <a href="contato.html">CONTATO</a>
+    <div class="submenu">
+      <a href="#">CURSOS</a>
+      <div class="submenu-content">
+        <a href="ads.html">Análise e Desenvolvimento de Sistemas</a>
+        <a href="eng.html">Engenharia de Produção</a>
+      </div>
+    </div>
+    <a href="entrar.html">ENTRAR</a>
+    <a href="sobre.html">SOBRE</a>
+  </div>
+
+  <!-- Logo -->
+  <div class="logo">
+    <img src="https://raw.githubusercontent.com/DWBA4/dwba4_semana_imagens/refs/heads/master/Logo.jpg" alt="Instituto Federal São Paulo">
+  </div>
+
+  <h2>Engenharia de Produção</h2>
+  <p>A Engenharia de Produção é um ramo da engenharia que objetiva identificar, formular e solucionar problemas ligados às atividades de projeto, operação e gerenciamento do trabalho e sistemas de produção de bens e (ou) serviços, considerando seus aspectos humanos, econômicos, financeiros, sociais e ambientais, com visão ética e humana, em atendimento às demandas da sociedade. O engenheiro de produção é um profissional fundamental em indústrias e empresas de quase todos os setores. Ele deve reunir conhecimento científico, habilidades específicas, talento, intuição, atitude, compromisso social e profissional, com o objetivo de gerenciar o trabalho do homem dentro de parâmetros de segurança, utilizar racionalmente materiais, energias e meio-ambiente, para produzir bens e serviços de forma eficaz e econômica, na busca constante de interesses e necessidades da sociedade.</p>
+
+  <footer>
+    <p>IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (011) 2504-0100</p>
+    <p>
+      <a class="facebook-link" href="https://www.facebook.com/ifsppirituba" target="_blank">
+        <img src="https://raw.githubusercontent.com/DWBA4/dwba4_semana_imagens/refs/heads/master/facebook.png" alt="Facebook"> Visite nossa página no Facebook
+      </a>
+    </p>
+  </footer>
+
+</body>
+</html>
